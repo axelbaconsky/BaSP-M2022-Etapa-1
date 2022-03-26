@@ -88,7 +88,44 @@
         <p>--------------------------------------------------------------</p>
     </div>
     <section>
-        <p>form</p>
+        <form action="test.php" method="POST">
+            <div>
+                <label>Full Name</label>
+                <input type="text" name="full-name" placeholder="John Smith">
+                <label>Email address</label>
+                <input type="email" name="email" placeholder="johnsmith@mail.com">
+            </div>
+            <div>
+                <label>Choose a department:</label>
+                <select name="department">
+                    <option value="Area">-Area-</option>
+                    <option value="Human Resources">Human Resources</option>
+                    <option value="Systems">Systems</option>
+                    <option value="Commercialization">Commercialization</option>
+                </select>
+                <label>Priority</label>
+                    <input type="radio" id="low" name="priority" value="low" checked> 
+                    <label for="low">Low</label>
+                    <input type="radio" id="medium" name="priority" value="medium">
+                    <label for="medium">Medium</label>
+                    <input type="radio" id="high" name="priority" value="high">
+                    <label for="high">High</label>
+            </div>
+            <div>
+                <label>Ask about our system</label>
+                <textarea name="ask-textarea" placeholder="Enter your message"></textarea>
+            </div>
+            <div>
+                <input type="checkbox" name="not-robot">
+                <label>I am not a robot</label>
+                <input type="checkbox" name="send-copy">
+                <label>Send me a copy</label>
+            </div>
+            <div>
+                <button>Submit</button>
+                <button>Reset</button>
+            </div>
+        </form>
     </section>
     <div>
         <p>--------------------------------------------------------------</p>
