@@ -4,12 +4,14 @@
 }
 
 body {
+    position: absolute;
     margin: 0px;
+    color: #373867;
 }
 
 main {
     display: inline-block;
-    margin-left: 252px;
+    margin-left: 30%;
 }
 
 header {
@@ -50,7 +52,7 @@ header img {
     top: 0;
 }
 
-.menu h2 {
+.menu span {
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -78,17 +80,33 @@ header img {
     font-size: 12px;
 }
 
-.side-contact {
-    font-size: 12px;
-    position: absolute;
-    top: 180px;
-    left: 37px;
+
+button {
+    background-color: #fff;
+    width: 136px;
+    height: 46px;
+    border-radius: 5px;
+    border-color: #373867;
+    color: #373867;
+    font-size: 15px;
+    font-weight: 500;
 }
 
-.side-address {
-    font-size: 12px;
-    line-height: 2px;
-    position: absolute;
-    top: 250px;
-    left: 37px
+button:hover {
+    background-color: #373867;
+    color: #fff;
+}
+
+.main-text {
+    display: inline-block;
+    width: 45%;
+}
+
+.main-text h2 {
+    font-size: 40px;
+}
+
+main #first-image {
+    display: inline-block;
+    width: 40%;
 }
