@@ -15,24 +15,23 @@ body {
 header {
     background-color: #373867;
     height: 77px;
-    width: 1440px;
 }
 
 header h1 {
     color: #fff;
     font-size: 40px;
     font-weight: 600;
-    position: absolute;
-    left: 167px;
-    top: 0px;
+    display: inline-block;
+    margin: 0px;
+    margin-left: 3%;
+    padding: 0px;
 }
 
 header img {
-    position: absolute;
-    left: 43px;
-    top: 13px;
-    bottom: 5px;
-    height: 62px;
+    display: inline-block;
+    margin-left: 2%;
+    margin-top: 0.5%;
+    height: auto;
     width: 77px;
 }
 
@@ -45,27 +44,32 @@ main {
 .main-text {
     display: inline-block;
     width: 45%;
+    padding-left: 3%;
 }
 
 .main-text h2 {
     font-size: 40px;
-    margin: 0px;
-    padding-top: 0px;
-    position:relative;
+    width: 516px;
 }
 
 .first-part {
     padding: 50px;
-    padding-left: 0px;
+    padding-left: 0%;
     padding-top: 0px;
+    width: 1110px;
+    height: 489px;
 }
 
 #first-image {
-    display: inline-block;
+    display: inline;
+    float: right;
     width: 45%;
     padding-top: 50px;
+}
+
+#first-image img {
     border: none;
-    border-radius: 50%;
+    border-radius: 5%;
 }
 
 .menu {
@@ -79,6 +83,22 @@ main {
     padding-left: 13px;
     position: sticky;
     top: 0;
+}
+
+#side-address {
+    display: inline;
+    width: 134px;
+    height: 56px;
+}
+
+.menu .side-contact img {
+    display: inline;
+    float: left;
+}
+
+.menu .side-contact {
+    width: 158px;
+    height: 155px;
 }
 
 .menu span {
@@ -126,8 +146,7 @@ button {
 }
 
 .main-text button {
-    position:relative;
-    left: 340px;
+    float: right;
 }
 
 button:hover {
