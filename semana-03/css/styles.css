@@ -9,13 +9,7 @@ body {
     margin: 0px;
     color: #373867;
     font-weight: 400;
-}
-
-main {
-    display: inline;
-    float: right;
-    padding: 68px;
-    width: 1110px;
+    width: 100%;
 }
 
 header {
@@ -40,6 +34,38 @@ header img {
     bottom: 5px;
     height: 62px;
     width: 77px;
+}
+
+main {
+    display: inline;
+    float: right;
+    width: 85%;
+}
+
+.main-text {
+    display: inline-block;
+    width: 45%;
+}
+
+.main-text h2 {
+    font-size: 40px;
+    margin: 0px;
+    padding-top: 0px;
+    position:relative;
+}
+
+.first-part {
+    padding: 50px;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+
+#first-image {
+    display: inline-block;
+    width: 45%;
+    padding-top: 50px;
+    border: none;
+    border-radius: 50%;
 }
 
 .menu {
@@ -109,20 +135,6 @@ button:hover {
     color: #fff;
 }
 
-.main-text {
-    display: inline-block;
-    width: 45%;
-}
-
-.main-text h2 {
-    font-size: 40px;
-}
-
-#first-image {
-    display: inline-block;
-    width: 45%;
-}
-
 .functions h2 {
     font-size: 30px;
 }
@@ -149,4 +161,40 @@ button:hover {
     background-color: #3738671A;
     padding: 80px;
     box-sizing: border-box;
+}
+
+main .bottom-links {
+    display: inline-block;
+    width: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+footer {
+    float: right;
+    height: 100px;
+    width: 100%;
+}
+
+footer .footer-links {
+    display: inline-block;
+    position: absolute;
+    width: 60%;
+    margin-left: 15%;
+}
+
+#copyright {
+    display: inline;
+    float: right;
+    width: 20%;
+}
+
+footer .footer-links img {
+    width: 4%;
+    height: 4%;
+}
+
+footer .footer-links a {
+    padding-right: 20px;
+    padding-left: 20px;
 }
