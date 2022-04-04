@@ -1,34 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 * {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 body {
     position: absolute;
     margin: 0px;
     color: #373867;
+    font-weight: 400;
 }
 
 main {
-    display: inline-block;
-    margin-left: 30%;
+    display: inline;
+    float: right;
+    padding: 68px;
+    width: 1110px;
 }
 
 header {
     background-color: #373867;
     height: 77px;
+    width: 1440px;
 }
 
 header h1 {
     color: #fff;
     font-size: 40px;
-    height: 47px;
-    width: 260px;
     font-weight: 600;
     position: absolute;
     left: 167px;
     top: 0px;
-    bottom: 21px;
 }
 
 header img {
@@ -41,11 +43,12 @@ header img {
 }
 
 .menu {
-    display: inline-block;
+    display: inline;
+    float: left;
     background-color: #aace9b;
     color: #373867;
     width: 184px;
-    height: 900px;
+    height: 1000px;
     padding-top: 1px;
     padding-left: 13px;
     position: sticky;
@@ -58,7 +61,7 @@ header img {
     line-height: 16px;
 }
 
-.menu h3 {
+#contact-us {
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
@@ -80,7 +83,6 @@ header img {
     font-size: 12px;
 }
 
-
 button {
     background-color: #fff;
     width: 136px;
@@ -90,6 +92,16 @@ button {
     color: #373867;
     font-size: 15px;
     font-weight: 500;
+}
+
+#submit-button {
+    background-color: #aace9b;
+    border: none;
+}
+
+.main-text button {
+    position:relative;
+    left: 340px;
 }
 
 button:hover {
@@ -106,7 +118,35 @@ button:hover {
     font-size: 40px;
 }
 
-main #first-image {
+#first-image {
     display: inline-block;
-    width: 40%;
+    width: 45%;
+}
+
+.functions h2 {
+    font-size: 30px;
+}
+
+.functions article{
+    display: inline-block;
+    width: 49%;
+}
+
+.functions article p {
+    display: inline-block;
+    width: 50%;
+}
+
+.functions article img {
+    display: inline-block;
+    width: 20%;
+    margin-right: 80px;
+}
+
+.improvement div {
+    display: inline-block;
+    width: 45%;
+    background-color: #3738671A;
+    padding: 80px;
+    box-sizing: border-box;
 }
