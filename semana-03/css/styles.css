@@ -24,7 +24,6 @@ header h1 {
     display: inline-block;
     margin: 0px;
     margin-left: 3%;
-    padding: 0px;
 }
 
 header img {
@@ -72,6 +71,10 @@ main {
     border-radius: 5%;
 }
 
+.main-text button {
+    float: right;
+}
+
 .menu {
     display: inline;
     float: left;
@@ -102,6 +105,7 @@ main {
 }
 
 .menu span {
+    display: inline;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -123,6 +127,7 @@ main {
 
 .menu a {
     padding: 6px 8px 6px 0px;
+    text-decoration: none;
 }
 
 .menu p {
@@ -131,22 +136,14 @@ main {
 
 button {
     background-color: #fff;
-    width: 136px;
+    width: 130px;
     height: 46px;
     border-radius: 5px;
     border-color: #373867;
     color: #373867;
     font-size: 15px;
     font-weight: 500;
-}
-
-#submit-button {
-    background-color: #aace9b;
-    border: none;
-}
-
-.main-text button {
-    float: right;
+    cursor: pointer;
 }
 
 button:hover {
@@ -163,6 +160,10 @@ button:hover {
     width: 49%;
 }
 
+.functions article h3 {
+    display: inline-block;
+}
+
 .functions article p {
     display: inline-block;
     width: 50%;
@@ -170,7 +171,7 @@ button:hover {
 
 .functions article img {
     display: inline-block;
-    width: 20%;
+    width: 30%;
     margin-right: 80px;
 }
 
@@ -182,11 +183,103 @@ button:hover {
     box-sizing: border-box;
 }
 
+.form-section form {
+    width: 100%;
+    height: 600px;
+    font-weight: 500;
+}
+
+#name-input {
+    display: inline-block;
+    width: 49%;
+    box-sizing: border-box;
+}
+
+#name-input input {
+    padding: 10px;
+    margin-top: 1%;
+    border-radius: 5px;
+    width: 90%;
+}
+
+#email-input {
+    display: inline-block;
+    width: 49%;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+#email-input input {
+    padding: 10px;
+    margin-top: 1%;
+    border-radius: 5px;
+    width: 90%;
+}
+
+#department-select {
+    display: inline-block;
+    width: 46%;
+    height: 72px;
+    margin-top: 1%;
+}
+
+#department-select select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 1%;
+    border-radius: 5px;
+}
+
+#priority-input {
+    display: inline-block;
+    width: 45%;
+    margin-left: 3.5%;
+    height: 72px;
+}
+
+#priority-input label {
+    margin-right: 20%;
+}
+
+#priority-input legend {
+    margin-bottom: 2%;
+}
+
+#text-area textarea{
+    display: inline-block;
+    width: 96%;
+    height: 116px;
+    resize: none;
+    border-radius: 5px;
+}
+
+#form-checks {
+    margin-bottom: 3%;
+}
+#form-checks input {
+    margin-top: 3%;
+    transform: scale(1.5);
+}
+
+#form-checks label {
+    margin-right: 7%;
+}
+
+#submit-button {
+    background-color: #aace9b;
+    border: none;
+    margin-right: 5%;
+}
+
 main .bottom-links {
     display: inline-block;
     width: 10%;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+main .bottom-links a {
+    text-decoration: none;
 }
 
 footer {
