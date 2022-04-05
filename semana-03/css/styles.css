@@ -238,16 +238,35 @@ h2 {
 
 .improvement div {
     display: inline-block;
-    width: 45%;
+    position: relative;
+    width: 37%;
     background-color: #3738671A;
-    padding: 80px;
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-left: 2%;
     box-sizing: border-box;
+    vertical-align: top;
+}
+
+.improvement div p{
+    width: 100%;
+}
+
+.improvement img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 #improvement-h2 {
     border-bottom: 4px solid #aace9b;
     padding-bottom: 1%;
     width: 740px;
+}
+
+.improvement h3 {
+    font-size: 30px;
+    font-weight: 700;
+
 }
 
 .form-section form {
@@ -382,7 +401,7 @@ main .bottom-links ol {
     border-top: 4px solid #aace9b;
     margin-left: 2%;
     margin-top: 5%;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
     width: 1080px;
     border-radius: 5px;
 }
@@ -397,18 +416,24 @@ footer .footer-links {
     display: inline-block;
     position: absolute;
     width: 60%;
-    margin-left: 15%;
+    margin-left: 16%;
 }
 
 #copyright {
     display: inline;
     float: right;
-    width: 20%;
+    width: 30%;
+    margin-right: 10%;
+}
+
+#city {
+    margin-left: 46.5%;
 }
 
 footer .footer-links img {
-    width: 4%;
-    height: 4%;
+    vertical-align: top;
+    width: auto;
+    height: 40px;
 }
 
 footer .footer-links a {
