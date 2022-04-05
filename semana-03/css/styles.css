@@ -13,7 +13,9 @@ body {
 }
 
 header {
+    position: relative;
     background-color: #373867;
+    width: 100%;
     height: 77px;
 }
 
@@ -21,7 +23,7 @@ header h1 {
     color: #fff;
     font-size: 40px;
     font-weight: 600;
-    display: inline-block;
+    display: inline;
     margin: 0px;
     margin-left: 3%;
 }
@@ -44,6 +46,7 @@ main {
     display: inline-block;
     width: 45%;
     padding-left: 3%;
+    margin-top: 1%;
 }
 
 .main-text h2 {
@@ -134,6 +137,15 @@ main {
     font-size: 12px;
 }
 
+.div-line {
+    border-top: 4px solid #AFAFC2;
+    margin-left: 2%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    width: 1080px;
+    border-radius: 5px;
+}
+
 button {
     background-color: #fff;
     width: 130px;
@@ -151,8 +163,15 @@ button:hover {
     color: #fff;
 }
 
-.functions h2 {
+.functions {
+    width: 1110px;
+    height: auto;
+    margin-left: 3%;
+}
+
+#function-h2 {
     font-size: 30px;
+    margin-left: 2%;
 }
 
 .functions article{
@@ -160,8 +179,11 @@ button:hover {
     width: 49%;
 }
 
-.functions article h3 {
+.functions article span {
     display: inline-block;
+    margin-left: 50%;
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .functions article p {
@@ -171,8 +193,13 @@ button:hover {
 
 .functions article img {
     display: inline-block;
-    width: 30%;
+    width: 34%;
     margin-right: 80px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-left: 2%;
 }
 
 .improvement div {
@@ -185,13 +212,23 @@ button:hover {
 
 .form-section form {
     width: 100%;
-    height: 600px;
+    height: 500px;
     font-weight: 500;
+    margin-left: 2%;
+}
+
+#get-touch {
+    font-size: 30px;
+    margin-left: 2%;
+}
+
+#first-row {
+    margin-top: 4%;
 }
 
 #name-input {
     display: inline-block;
-    width: 49%;
+    width: 39%;
     box-sizing: border-box;
 }
 
@@ -204,7 +241,7 @@ button:hover {
 
 #email-input {
     display: inline-block;
-    width: 49%;
+    width: 39%;
     box-sizing: border-box;
     margin-left: 10px;
 }
@@ -218,7 +255,7 @@ button:hover {
 
 #department-select {
     display: inline-block;
-    width: 46%;
+    width: 37%;
     height: 72px;
     margin-top: 1%;
 }
@@ -247,7 +284,7 @@ button:hover {
 
 #text-area textarea{
     display: inline-block;
-    width: 96%;
+    width: 90%;
     height: 116px;
     resize: none;
     border-radius: 5px;
@@ -271,15 +308,25 @@ button:hover {
     margin-right: 5%;
 }
 
+#our-story {
+    margin-top: 4%;
+    margin-left: 2%;
+    width: 1050px;
+}
+
 main .bottom-links {
     display: inline-block;
     width: 10%;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-right: 10%;
 }
 
 main .bottom-links a {
     text-decoration: none;
+}
+
+main .bottom-links ol {
+    padding-left: 10%;
 }
 
 footer {
