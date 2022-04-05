@@ -141,35 +141,43 @@
         </div>
     </section>
         <h2>Get in touch with us</h2>
-    <section>
+    <section class="form-section">
         <form action="test.php" method="POST">
             <div>
-                <label>Full Name</label>
-                <input type="text" name="full-name" placeholder="John Smith">
-                <label>Email address</label>
-                <input type="email" name="email" placeholder="johnsmith@mail.com">
+                <div id="name-input">
+                    <label>Full Name</label>
+                    <input type="text" name="full-name" placeholder="John Smith">
+                </div>
+                <div id="email-input">
+                    <label>Email address</label>
+                    <input type="email" name="email" placeholder="johnsmith@mail.com">
+                </div>
             </div>
             <div>
-                <label>Choose a department:</label>
-                <select name="department">
-                    <option value="Area">-Area-</option>
-                    <option value="Human Resources">Human Resources</option>
-                    <option value="Systems">Systems</option>
-                    <option value="Commercialization">Commercialization</option>
-                </select>
-                <label>Priority</label>
-                    <input id="low" type="radio" name="priority" value="low" checked> 
-                    <label for="low">Low</label>
-                    <input id="medium" type="radio" name="priority" value="medium">
-                    <label for="medium">Medium</label>
-                    <input id="high" type="radio"name="priority" value="high">
-                    <label for="high">High</label>
+                <div id="department-select">
+                    <label>Choose a department:</label>
+                    <select name="department">
+                        <option value="Area">-Area-</option>
+                        <option value="Human Resources">Human Resources</option>
+                        <option value="Systems">Systems</option>
+                        <option value="Commercialization">Commercialization</option>
+                    </select>
+                </div>
+                <div id="priority-input">
+                    <legend>Priority</legend>
+                        <input id="low" type="radio" name="priority" value="low" checked> 
+                        <label for="low">Low</label>
+                        <input id="medium" type="radio" name="priority" value="medium">
+                        <label for="medium">Medium</label>
+                        <input id="high" type="radio"name="priority" value="high">
+                        <label for="high">High</label>
+                </div>    
             </div>
-            <div>
+            <div id="text-area">
                 <label>Ask about our system</label>
                 <textarea name="ask-textarea" placeholder="Enter your message"></textarea>
             </div>
-            <div>
+            <div id="form-checks">
                 <input type="checkbox" name="not-robot">
                 <label>I am not a robot</label>
                 <input type="checkbox" name="send-copy">
@@ -188,7 +196,16 @@
             non quo quis doloribus molestiae repellendus impedit alias, adipisci eos culpa expedita in 
             ratione nobis velit earum consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Cum est eligendi unde sed, doloremque error deleniti quaerat quia quasi ratione perspiciatis rem 
-            ipsam nemo ducimus animi aperiam vero ut ad.
+            ipsam nemo ducimus animi aperiam vero ut ad. Lorem, ipsum dolor sit amet consectetur 
+            adipisicing elit. Cupiditate commodi ad dicta quo perspiciatis expedita delectus in, 
+            laboriosam sed tempore obcaecati eos sint architecto reiciendis unde vero qui sequi adipisci!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aliquam sapiente 
+            praesentium, dolor distinctio odit magni nesciunt accusamus libero, esse doloribus ipsa nemo 
+            aliquid culpa explicabo quae nobis? Provident, optio! Lorem ipsum dolor sit amet consectetur, 
+            adipisicing elit. Reiciendis laudantium, unde dignissimos officia sed architecto culpa, odit 
+            praesentium accusantium ipsa amet delectus ut.
         </p>
     </section>
     <section>
