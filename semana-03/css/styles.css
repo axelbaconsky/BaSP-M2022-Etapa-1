@@ -267,7 +267,11 @@ h2 {
 .improvement h3 {
     font-size: 30px;
     font-weight: 700;
+}
 
+.improvement button {
+    width: 75px;
+    height: 38px;
 }
 
 .form-section form {
