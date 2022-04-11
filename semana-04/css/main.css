@@ -1,0 +1,161 @@
+/* Mobile */
+
+/* Main */
+
+.first-part {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid rgba(55, 56, 103, 0.3);
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+main {
+    color: #373867;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.first-part img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.first-part h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 3px;
+}
+
+.first-part h3 {
+    font-size:  16px;
+    margin-bottom: 13px;
+}
+
+.first-part p {
+    margin-bottom: 14px;
+}
+
+button {
+    background-color: #fff;
+    width: 98px;
+    height: 46px;
+    border-radius: 5px;
+    border-color: #373867;
+    color: #373867;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Functionalities */
+
+#function-h2 {
+    margin-top: 41px;
+    margin-bottom: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 4px solid #aace9b;
+    padding-bottom: 16px;
+    width: 180px;
+}
+
+.functions {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 51px;
+    padding-bottom: 40px;
+    border-bottom: 3px solid rgba(55, 56, 103, 0.3);
+}
+
+.functions img {
+    width: 73px;
+    height: 73px;
+    margin-bottom: 15px;
+    order: -1;
+}
+
+.functions span {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.functions p {
+    margin-top: 5px;
+    margin-bottom: 27px;
+    width: 80%;
+    text-align: center;
+}
+
+.functions article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Improvement */
+
+#improvement-h2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 21px;
+    border-bottom: 4px solid #aace9b;
+    margin-bottom: 50px;
+}
+
+.improvement {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px solid rgba(55, 56, 103, 0.3);
+    margin-bottom: 40px;
+}
+
+.improvement img {
+    width: 280px;
+    height: 240px;
+    border-radius: 5px;
+}
+
+.improvement h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 17px;
+    margin-bottom: 17px;
+}
+
+.improvement button {
+    margin-top: 17px;
+    width: 68px;
+    height: 34px;
+    font-weight: medium;
+}
+
+.improvement div {
+    background-color: rgba(55, 56, 103, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+/* Form */ 
+
+#get-touch-h2 {
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 4px solid #aace9b;
+    width: 250px;
+    margin-bottom: 31px;
+    padding-bottom: 16px;
+}
+
+.form-section {
+    display: flex;
+}
+
+
+
+
+
