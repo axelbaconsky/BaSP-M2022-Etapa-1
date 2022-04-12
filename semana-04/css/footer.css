@@ -1,0 +1,27 @@
+/* Footer */
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.footer-links img {
+    vertical-align: top;
+    width: auto;
+    height: 40px;
+}
+
+footer #copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer #copyright p {
+    margin-top: 24px;
+    font-size: 15px;
+    color: #373867;
+}
+
