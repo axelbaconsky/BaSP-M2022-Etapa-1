@@ -62,7 +62,6 @@
                 <img src="./assets/images/manage-teams.jpg" alt="" width="520px" height="387px">
             </div>
         </div>
-    <div class="div-line"></div>
         <h2 id="function-h2">Functionalities</h2>
         <section class="functions">
             <div>
@@ -102,7 +101,6 @@
                 </article>
             </div>
     </section>
-    <div class="div-line"></div>
     <h2 id="improvement-h2">Why does this mean an improvement in your work</h2>
     <section class="improvement">
         <div>      
@@ -146,7 +144,6 @@
             <button>More</button>
         </div>
     </section>
-    <div class="div-line"></div>
         <h2 id="get-touch-h2">Get in touch with us</h2>
     <section class="form-section">
         <form action="test.php" method="POST">
@@ -160,18 +157,18 @@
                     <input type="email" name="email" placeholder="johnsmith@mail.com">
                 </div>
             </div>
-            <div>
+            <div id="department-div">
                 <div id="department-select">
-                    <label>Choose a department:</label>
+                    <label id="choose-dep">Choose a department:</label>
                     <select name="department">
-                        <option value="Area">-Area-</option>
+                        <option disabled selected="Area">-Area-</option>
                         <option value="Human Resources">Human Resources</option>
                         <option value="Systems">Systems</option>
                         <option value="Commercialization">Commercialization</option>
                     </select>
                 </div>
+                <legend>Priority</legend>
                 <div id="priority-input">
-                    <legend>Priority</legend>
                         <input id="low" type="radio" name="priority" value="low" checked> 
                         <label for="low">Low</label>
                         <input id="medium" type="radio" name="priority" value="medium">
@@ -185,18 +182,21 @@
                 <textarea name="ask-textarea" placeholder="Enter your message"></textarea>
             </div>
             <div id="form-checks">
-                <input type="checkbox" name="not-robot">
-                <label>I am not a robot</label>
-                <input type="checkbox" name="send-copy">
-                <label>Send me a copy</label>
+                <div>
+                    <input type="checkbox" name="not-robot">
+                    <label>I am not a robot</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="send-copy">
+                    <label>Send me a copy</label>
+                </div>
             </div>
-            <div>
+            <div id="form-buttons">
                 <button id="submit-button">Submit</button>
                 <button>Reset</button>
             </div>
         </form>
     </section>
-    <div class="div-line"></div>
     <h2 id="our-story-h2">Our Story</h2>
     <section id="our-story">  
         <p>
@@ -216,8 +216,7 @@
             praesentium accusantium ipsa amet delectus ut.
         </p>
     </section>
-    <div class="div-line"></div>
-    <section>
+    <section id="links-section">
         <div class="bottom-links">
             <h4>Products</h4>
             <ol>
@@ -270,7 +269,6 @@
             </ol>
         </div>
     </section>
-    <div id="div-line-bottom"></div>
     </main>
     <footer>
         <div class="footer-links">
@@ -281,8 +279,9 @@
             <a href="https://www.github.com"><img src="./assets/icons/github-logo.png" alt="github logo"></a>
         </div>
         <div id="copyright">
-            <p id="city">Rosario, Argentina</p>
-            <p>Copyright 2022 Radium Rocket. All rights reserved</p>
+            <p>Rosario, Argentina</p>
+            <p>Copyright 2022 Radium Rocket</p>
+            <p>All rights reserved</p>
         </div>
     </footer>
 </body>
