@@ -163,35 +163,37 @@
         <h2 id="get-touch-h2">Get in touch with us</h2>
     <section class="form-section">
         <form action="test.php" method="POST">
-            <div id="first-row">
-                <div id="name-input">
-                    <label>Full Name</label>
-                    <input type="text" name="full-name" placeholder="John Smith">
-                </div>
+                <div id="form-inputs">
+                    <div id="name-input">
+                        <label>Full Name</label>
+                        <input type="text" name="full-name" placeholder="John Smith">
+                    </div>
                 <div id="email-input">
-                    <label>Email address</label>
-                    <input type="email" name="email" placeholder="johnsmith@mail.com">
-                </div>
-            </div>
-            <div id="department-div">
-                <div id="department-select">
-                    <label id="choose-dep">Choose a department:</label>
-                    <select name="department">
-                        <option disabled selected="Area">-Area-</option>
-                        <option value="Human Resources">Human Resources</option>
-                        <option value="Systems">Systems</option>
-                        <option value="Commercialization">Commercialization</option>
-                    </select>
-                </div>
-                <legend>Priority</legend>
-                <div id="priority-input">
-                        <input id="low" type="radio" name="priority" value="low" checked> 
-                        <label for="low">Low</label>
-                        <input id="medium" type="radio" name="priority" value="medium">
-                        <label for="medium">Medium</label>
-                        <input id="high" type="radio"name="priority" value="high">
-                        <label for="high">High</label>
-                </div>    
+                        <label>Email address</label>
+                        <input type="email" name="email" placeholder="johnsmith@mail.com">
+                    </div>
+                
+                    <div id="department-select">
+                        <label id="choose-dep">Choose a department:</label>
+                        <select name="department">
+                            <option disabled selected="Area">-Area-</option>
+                            <option value="Human Resources">Human Resources</option>
+                            <option value="Systems">Systems</option>
+                            <option value="Commercialization">Commercialization</option>
+                        </select>
+                    </div>
+                    <div>
+                        <legend>Priority</legend>
+                        <div id="priority-input">
+                                <input id="low" type="radio" name="priority" value="low" checked> 
+                                <label for="low">Low</label>
+                                <input id="medium" type="radio" name="priority" value="medium">
+                                <label for="medium">Medium</label>
+                                <input id="high" type="radio"name="priority" value="high">
+                                <label for="high">High</label>
+                        </div>
+                    </div>
+                
             </div>
             <div id="text-area">
                 <label>Ask about our system</label>
