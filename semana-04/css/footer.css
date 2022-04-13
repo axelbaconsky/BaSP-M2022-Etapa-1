@@ -36,6 +36,7 @@ footer #copyright p {
     .footer-links {
         flex-direction: row;
         width: 30%;
+        margin-left: 20%;
     }
 
     #links-section {
