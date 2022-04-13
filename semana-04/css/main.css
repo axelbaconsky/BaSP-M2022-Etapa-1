@@ -1,12 +1,10 @@
-/* Mobile */
-
 /* Main */
 
 .first-part {
     margin-top: 60px;
     margin-bottom: 30px;
     padding-bottom: 30px;
-    border-bottom: 3px solid rgba(55, 56, 103, 0.3);
+    border-bottom: 3px solid #3738674d;
     display: flex;
     flex-direction: column-reverse;
 }
@@ -51,6 +49,14 @@ button {
     cursor: pointer;
 }
 
+/* Sidebar */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color:#aace9b ;
+}
+
 /* Functionalities */
 
 #function-h2 {
@@ -68,26 +74,27 @@ button {
     flex-direction: column;
     margin-bottom: 51px;
     padding-bottom: 40px;
-    border-bottom: 3px solid rgba(55, 56, 103, 0.3);
+    border-bottom: 3px solid #3738674d;
 }
 
 .functions img {
-    width: 120px;
-    height: 120px;
+    width: 35%;
+    height: 35%;
     margin-bottom: 15px;
     order: -1;
 }
 
-.functions span {
+.functions h3 {
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 6px;
+    text-align: center;
 }
 
 .functions p {
     margin-top: 5px;
     margin-bottom: 27px;
-    width: 80%;
+    width: 100%;
     text-align: center;
 }
 
@@ -110,13 +117,13 @@ button {
 .improvement {
     display: flex;
     flex-direction: column;
-    border-bottom: 3px solid rgba(55, 56, 103, 0.3);
+    border-bottom: 3px solid #3738674d;
     margin-bottom: 40px;
 }
 
 .improvement img {
-    width: 280px;
-    height: 240px;
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
 }
 
@@ -135,9 +142,10 @@ button {
 }
 
 .improvement div {
-    background-color: rgba(55, 56, 103, 0.1);
+    background-color: #3738671a;
     margin-bottom: 30px;
     padding: 20px;
+    border-radius: 5px;
 }
 
 /* Form */ 
@@ -156,7 +164,7 @@ button {
     flex-direction: column;
     font-weight: bold;
     margin-bottom: 35px;
-    border-bottom: 3px solid rgba(55, 56, 103, 0.3);
+    border-bottom: 3px solid #3738674d;
     padding-bottom: 50px;
 }
 
@@ -170,20 +178,21 @@ button {
     width: 320px;
     height: 37px;
     border-radius: 4px;
-    border: 2px solid rgba(55, 56, 103, 0.5);   
+    border: 2px solid #37386780;   
 }
 
 .form-section #name-input, #email-input {
     width: 200px;
 }
 
-.form-section #department-div {
+.form-section #department-select {
     display: flex;
     flex-direction: column;
 }
 
 .form-section #choose-dep {
     font-size: 14px;
+    width: 360px;
 }
 
 .form-section select {
@@ -192,7 +201,7 @@ button {
     margin-top: 7px;
     margin-bottom: 20px;
     border-radius: 4px;
-    border: 2px solid rgba(55, 56, 103, 0.5);
+    border: 2px solid #37386780;
     text-indent: 12px; 
 }
 
@@ -215,8 +224,8 @@ button {
 
 .form-section #text-area textarea {
     resize: none;
-    width: 319px;
-    height: 117px;
+    width: 100%;
+    height: 120px;
     text-indent: 12px;
     margin-top: 13px;
 }
@@ -262,7 +271,7 @@ button {
 }
 
 #our-story {
-    border-bottom: 3px solid rgba(55, 56, 103, 0.3);
+    border-bottom: 3px solid #3738674d;
     padding-bottom: 28px;
     margin-bottom: 136px;
 }
@@ -286,4 +295,147 @@ button {
 #links-section h4 {
     font-size: 16px;
     font-weight: bold;
+}
+
+/* ---- */
+
+@media screen and (min-width: 481px) {
+    .sidebar {
+        display: none;
+    }
+
+    .functions {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .functions .functionality {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .functions .functionality h3 {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .functions .functionality p {
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .improvement {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .improvement div {
+        display: flex;
+        flex-direction: column;
+        width: 38%;
+    }
+
+    .improvement :nth-of-type(odd){
+        margin-right: 5%;
+    }
+
+    .improvement button {
+        width: 75px;
+        height: 70px;
+    }
+
+    .form-section #first-row div {
+        flex-direction: row;
+    }
+
+    .form-section #form-buttons {
+        justify-content: center;
+    }
+
+    .form-section #form-checks {
+        justify-content: center;
+    }
+
+    .form-section #form-checks div {
+        margin-right: 6%;
+    }
+
+    .form-section #form-buttons button {
+        margin-right: 10%;
+    }
+
+    #links-section {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+        align-items: baseline;
+    }
+
+    @media (min-width: 1024px) {
+
+        header #menu-icon {
+            visibility: hidden;
+        }
+
+        main p {
+            font-size: 20px;
+        }
+
+        .first-part {
+            flex-direction: row;
+        }
+
+        .first-part .main-text {
+            width: 50%;
+            margin-right: 5%;
+        }
+
+        .first-part .main-text h2 {
+            font-size: 40px;
+            margin-bottom: 19px;
+        }
+
+        .first-part .main-text h3 {
+            font-size: 20px;
+            margin-bottom: 42px;
+        }
+
+        .first-part .main-text p {
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .first-part .main-text button {
+            
+            width: 136px;
+        }
+
+        .first-part #first-image {
+            width: 50%;
+            justify-content: right;
+        }
+        
+        .functions  {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .functions div {
+            flex-direction: row;
+            max-width: 50%;
+        }
+
+        .functions .functionality h3 {
+            font-size: 30px;
+        }
+
+        .functions .functionality p {
+            font-size: 20px;
+        }
+    }
+
 }
