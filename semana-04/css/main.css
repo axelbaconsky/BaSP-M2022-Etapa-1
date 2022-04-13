@@ -301,6 +301,12 @@ aside {
 
 /* ---- */
 
+@media screen and (max-width: 1024px) {
+    aside {
+        display: none;
+    }
+}
+
 @media screen and (min-width: 481px) {
     aside {
         display: none;
