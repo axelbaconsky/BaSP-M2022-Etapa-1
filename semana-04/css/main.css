@@ -1,5 +1,7 @@
 /* Main */
 
+
+
 .first-part {
     margin-top: 60px;
     margin-bottom: 30px;
@@ -300,7 +302,7 @@ aside {
 /* ---- */
 
 @media screen and (min-width: 481px) {
-    .sidebar {
+    aside {
         display: none;
     }
 
@@ -374,14 +376,14 @@ aside {
         align-items: baseline;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1025px) {
 
         header #menu-icon {
             visibility: hidden;
         }
 
-        main p {
-            font-size: 20px;
+        main {
+            padding-left: 20%;
         }
 
         .first-part {
@@ -436,6 +438,29 @@ aside {
         .functions .functionality p {
             font-size: 20px;
         }
+
+        .improvement {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+        }
+    
+        .improvement div {
+            display: flex;
+            flex-direction: column;
+            width: 38%;
+        }
+    
+        .improvement :nth-of-type(odd){
+            margin-right: 5%;
+        }
+    
+        .improvement button {
+            width: 75px;
+            height: 70px;
+        }
+
     }
 
 }

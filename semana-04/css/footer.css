@@ -25,3 +25,35 @@ footer #copyright p {
     color: #373867;
 }
 
+@media (min-width: 1024px) {
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        width: 30%;
+    }
+
+    #links-section {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+        align-items: baseline;
+    }
+
+    footer div {
+        width: 20%;
+    }
+
+    footer #copyright p {
+        margin-top: 1px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+}
