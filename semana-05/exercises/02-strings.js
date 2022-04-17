@@ -64,5 +64,3 @@ var result =
     + string1.substring(12,13).toUpperCase() + string1.substring(13).toLowerCase());
 
 console.log(result);
-
-
