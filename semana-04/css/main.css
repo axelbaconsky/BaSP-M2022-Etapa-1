@@ -320,12 +320,6 @@ aside {
 
 /* ---- */
 
-@media screen and (max-width: 1024px) {
-    aside {
-        display: none;
-    }
-}
-
 @media screen and (min-width: 481px) {
     aside {
         display: none;
@@ -413,92 +407,90 @@ aside {
         margin-right: 10%;
         align-items: baseline;
     }
+}
 
-    @media (min-width: 1025px) {
+@media (min-width: 1025px) {
 
-        header #menu-icon {
-            visibility: hidden;
-        }
-
-        main {
-            padding-left: 20%;
-        }
-
-        .first-part {
-            flex-direction: row;
-        }
-
-        .first-part .main-text {
-            width: 50%;
-            margin-right: 5%;
-        }
-
-        .first-part .main-text h2 {
-            font-size: 40px;
-            margin-bottom: 19px;
-        }
-
-        .first-part .main-text h3 {
-            font-size: 20px;
-            margin-bottom: 42px;
-        }
-
-        .first-part .main-text p {
-            font-size: 18px;
-            margin-bottom: 18px;
-        }
-
-        .first-part .main-text button {
-            
-            width: 136px;
-        }
-
-        .first-part #first-image {
-            width: 50%;
-            justify-content: right;
-        }
-        
-        .functions  {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-
-        .functions div {
-            flex-direction: row;
-            max-width: 50%;
-        }
-
-        .functions .functionality h3 {
-            font-size: 30px;
-        }
-
-        .functions .functionality p {
-            font-size: 20px;
-        }
-
-        .improvement {
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-content: center;
-            justify-content: center;
-        }
-    
-        .improvement div {
-            display: flex;
-            flex-direction: column;
-            width: 38%;
-        }
-    
-        .improvement :nth-of-type(odd){
-            margin-right: 5%;
-        }
-    
-        .improvement button {
-            width: 75px;
-            height: 70px;
-        }
-
+    header #menu-icon {
+        visibility: hidden;
     }
 
+    main {
+        padding-left: 20%;
+    }
+
+    .first-part {
+        flex-direction: row;
+    }
+
+    .first-part .main-text {
+        width: 50%;
+        margin-right: 5%;
+    }
+
+    .first-part .main-text h2 {
+        font-size: 40px;
+        margin-bottom: 19px;
+    }
+
+    .first-part .main-text h3 {
+        font-size: 20px;
+        margin-bottom: 42px;
+    }
+
+    .first-part .main-text p {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+    .first-part .main-text button {
+        
+        width: 136px;
+    }
+
+    .first-part #first-image {
+        width: 50%;
+        justify-content: right;
+    }
+        
+    .functions  {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .functions div {
+        flex-direction: row;
+        max-width: 50%;
+    }
+
+    .functions .functionality h3 {
+        font-size: 30px;
+    }
+
+    .functions .functionality p {
+        font-size: 20px;
+    }
+
+    .improvement {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .improvement div {
+        display: flex;
+        flex-direction: column;
+        width: 38%;
+    }
+    
+    .improvement :nth-of-type(odd){
+        margin-right: 5%;
+    }
+    
+    .improvement button {
+        width: 75px;
+        height: 70px;
+    }
 }

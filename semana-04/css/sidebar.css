@@ -1,99 +1,98 @@
 
 @media (min-width: 1025px){
 
-main p {
-    font-size: 20px;
-}
+    main p {
+        font-size: 20px;
+    }
 
-.menu {
-    display: inline;
-    background-color: #aace9b;
-    color: #373867;
-    width: 184px;
-    height: 1000px;
-    padding-top: 1%;
-    padding-left: 13px;
-    position: fixed;
-    top: 70px;
-    left: 0px;
-}
+    .menu {
+        display: inline;
+        background-color: #aace9b;
+        color: #373867;
+        width: 184px;
+        height: 1000px;
+        padding-top: 1%;
+        padding-left: 13px;
+        position: fixed;
+        top: 70px;
+        left: 0px;
+    }
 
-#menu-div {
-    border-top: 3px solid #373867;
-    margin-top: 5%;
-    margin-bottom: 4%;
-    width: 45px;
-}
+    #menu-div {
+        border-top: 3px solid #373867;
+        margin-top: 5%;
+        margin-bottom: 4%;
+        width: 45px;
+    }
 
-.menu .side-contact p {
-    margin-left: 20%
-}
+    .menu .side-contact p {
+        margin-left: 20%
+    }
 
-#side-address {
-    display: inline;
-    width: 134px;
-    height: 56px;
-}
+    #side-address {
+        display: inline;
+        width: 134px;
+        height: 56px;
+    }
 
-#side-phone {
-    margin-top: 30%;
-    margin-bottom: 30%;
-}
+    #side-phone {
+        margin-top: 30%;
+        margin-bottom: 30%;
+    }
 
-#side-email {
-    margin-top: 20%;
-}
+    #side-email {
+        margin-top: 20%;
+    }
 
-.menu .side-contact img {
-    display: inline;
-    float: left;
-}
+    .menu .side-contact img {
+        display: inline;
+        float: left;
+    }
 
-.menu .side-contact {
-    width: 158px;
-    height: 155px;
-}
+    .menu .side-contact {
+        width: 158px;
+        height: 155px;
+    }
 
-.menu span {
-    display: inline;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-}
+    .menu span {
+        display: inline;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+    }
 
-#contact-us {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-}
+    #contact-us {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+    }
 
-.menu-buttons {
-    list-style-type: none;
-    font-weight: 400;
-    font-size: 12px;
-    padding-left: 0px;
-    line-height: 35px;
-}
+    .menu-buttons {
+        list-style-type: none;
+        font-weight: 400;
+        font-size: 12px;
+        padding-left: 0px;
+        line-height: 35px;
+    }
 
-.menu a {
-    padding: 6px 8px 6px 0px;
-    text-decoration: none;
-    font-weight: 600;
-}
+    .menu a {
+        padding: 6px 8px 6px 0px;
+        text-decoration: none;
+        font-weight: 600;
+    }
 
-.menu a:hover {
-    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.63);
-}
+    .menu a:hover {
+        text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.63);
+    }
 
-.menu p {
-    font-size: 12px;
-}
+    .menu p {
+        font-size: 12px;
+    }
 
-.menu-buttons .menu-div {
-    border-top: 1px solid rgba(55, 56, 103, 0.4);
-    width: 90%;
-    margin-top: 8%;
-    margin-bottom: 8%;
-}
-
+    .menu-buttons .menu-div {
+        border-top: 1px solid rgba(55, 56, 103, 0.4);
+        width: 90%;
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
 }
