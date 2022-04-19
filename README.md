@@ -23,7 +23,6 @@ Added flexbox and media queries to the landing page. This is the link of the Git
 
 https://axelbaconsky.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
 
-_By Axel Bacoñsky_
 
 ## Week 05
 
@@ -33,3 +32,5 @@ Link to the JavaScript exercises:
 
 https://axelbaconsky.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
 
+
+_By Axel Bacoñsky_
