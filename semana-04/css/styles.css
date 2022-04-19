@@ -47,6 +47,7 @@ a{
     font-size: var(--button);
     font-weight: var(--button-weight);
     cursor: pointer;
+    color: #373867;
 }
 
 a:hover{
