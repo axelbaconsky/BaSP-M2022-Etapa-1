@@ -25,3 +25,11 @@ https://axelbaconsky.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
 
 _By Axel Bacoñsky_
 
+## Week 05
+
+Done JavaScript exercises of this week and corrections on the work from Week 04.
+
+Link to the JavaScript exercises:
+
+https://axelbaconsky.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
+
