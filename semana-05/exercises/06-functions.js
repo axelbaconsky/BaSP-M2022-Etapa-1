@@ -35,18 +35,20 @@ function sumaB(num1, num2) {
 
 result = sumaB(num1, num2);
 
-console.log(result);
+alert(result);
 
 
 // C - Crear una función validate integer que reciba un número como parámetro y devuelva verdadero si es un número entero.
 
 console.log('-Exercise 6.c: ');
 
+var isInteger;
+
 function validateInteger(num1) {
     if (Number.isInteger(num1)) {
-        console.log('The number is Integer: ' + num1);
+        isInteger;
     } else {
-        console.log('The number is NOT Integer: ' + num1);
+        isInteger;
     }
 }
 
@@ -75,12 +77,11 @@ function sumaD(num1, num2) {
             return Math.round(num1);
         }
     }  
-    
 }
 
 var resultD = sumaD(2,7.8);
 
-console.log('Result: ' + resultD);
+alert('Result: ' + resultD);
 
 // E - Convertir la validación del ejercicio 6d) en una función separada y llamarla dentro de la función suma 
 //probando que todo siga funcionando igual.
@@ -92,8 +93,7 @@ function validation(num1,num2) {
         if (Number.isInteger(num1)) {
             if (Number.isInteger(num2)) {
                 return;
-            } 
-            else {
+            } else {
                 console.log('The second number is NOT Integer: ' + num2);
                 return Math.round(num2);
             } 

@@ -8,7 +8,7 @@ console.log('-Exercise 5.a: ');
 var fruits = ['apple', 'banana', 'orange', 'pear', 'kiwi'];
 
 for (let i = 0; i < fruits.length; i++) {
-    console.log(fruits[i]);
+    alert(fruits[i]);
 }
 
 // B - Al array anterior convertir la primera letra de cada palabra en mayúscula y mostrar 
@@ -18,7 +18,7 @@ console.log('-Exercise 5.b: ');
 
 for (let i = 0; i < fruits.length; i++) {
     fruits[i] = fruits[i].charAt(0).toUpperCase() + fruits[i].slice(1);
-    console.log(fruits[i]);
+    alert(fruits[i]);
 }
 
 // C - Crear una variable llamada “sentence” que tenga un string vacío, luego al array del 
@@ -33,7 +33,7 @@ for (let i = 0; i < fruits.length; i++) {
     sentence = sentence + (fruits[i] + ' ');
 }
 
-console.log(sentence);
+alert(sentence);
 
 // D - Crear una array vacío y con un bucle for de 10 repeticiones. Llenar el array con el 
 //número de la repetición, es decir que al final de la ejecución del bucle for debería haber 10 
@@ -48,4 +48,4 @@ for (let i = 0; i < 10; i++) {
     arr[i] = i;
 }
 
-console.log(arr);
+alert(arr);

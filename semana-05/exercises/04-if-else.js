@@ -8,10 +8,10 @@ console.log('-Exercise 4.a: ');
 var num = Math.random();
 
 if (num > 0.5) {
-    console.log(num + ' is greater than 0,5');
+    alert(num + ' is greater than 0,5');
 } 
 else {
-    console.log(num + ' is lower than 0,5');
+    alert(num + ' is lower than 0,5');
 }
 
 
@@ -44,4 +44,4 @@ if (age < 2) {
     result = 'Anciano';
 }
     
-console.log(age + ' = ' + result);
+alert(age + ' = ' + result);

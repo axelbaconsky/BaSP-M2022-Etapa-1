@@ -26,7 +26,7 @@ console.log(result);
 console.log('-Exercise 2.c: ');
 
 var string1 = 'RocketRadium';
-var result = string1.substring(9);
+var result = string1.substring(string1.length - 3);
 
 console.log(result);
 

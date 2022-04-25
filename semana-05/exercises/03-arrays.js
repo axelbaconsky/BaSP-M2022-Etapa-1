@@ -54,7 +54,7 @@ console.log(months.reverse());
 
 //F - Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
 
-console.log('-Exercise 3.f: ');1
+console.log('-Exercise 3.f: ');
 
 var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
 "Octubre", "Noviembre", "Diciembre"];
