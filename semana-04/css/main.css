@@ -1,7 +1,5 @@
 /* Main */
 
-
-
 .first-part {
     margin-top: 60px;
     margin-bottom: 30px;
@@ -56,9 +54,7 @@ button {
 /* Sidebar */
 
 aside {
-    display: flex;
-    flex-direction: column;
-    background-color:#aace9b ;
+    display: none;
 }
 
 /* Functionalities */
