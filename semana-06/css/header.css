@@ -1,0 +1,19 @@
+
+/* Mobile */
+
+header {
+    background-color: #373867;
+    font-weight: bold;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#logo-img {
+    width: 72px;
+} 

@@ -1,0 +1,492 @@
+/* Main */
+
+.first-part {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #3738674d;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+main {
+    color: #373867;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.first-part img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.first-part h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 3px;
+}
+
+.first-part h3 {
+    font-size:  16px;
+    margin-bottom: 13px;
+}
+
+.first-part p {
+    margin-bottom: 14px;
+}
+
+button {
+    background-color: #fff;
+    width: 98px;
+    height: 46px;
+    border-radius: 5px;
+    border-color: #373867;
+    color: #373867;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Sidebar */
+
+aside {
+    display: none;
+}
+
+/* Functionalities */
+
+#function-h2 {
+    margin-top: 41px;
+    margin-bottom: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 4px solid #aace9b;
+    padding-bottom: 16px;
+    width: 180px;
+}
+
+.functions {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 51px;
+    padding-bottom: 40px;
+    border-bottom: 3px solid #3738674d;
+}
+
+.functions img {
+    width: 35%;
+    height: 35%;
+    margin-bottom: 15px;
+    order: -1;
+}
+
+.functions h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.functions p {
+    margin-top: 5px;
+    margin-bottom: 27px;
+    width: 100%;
+    text-align: center;
+}
+
+.functions article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Improvement */
+
+#improvement-h2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 21px;
+    border-bottom: 4px solid #aace9b;
+    margin-bottom: 50px;
+}
+
+.improvement {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px solid #3738674d;
+    margin-bottom: 40px;
+}
+
+.improvement img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.improvement h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 17px;
+    margin-bottom: 17px;
+}
+
+.improvement button {
+    margin-top: 17px;
+    width: 68px;
+    height: 34px;
+    font-weight: medium;
+}
+
+.improvement div {
+    background-color: #3738671a;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Form */ 
+
+#get-touch-h2 {
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 4px solid #aace9b;
+    width: 250px;
+    margin-bottom: 31px;
+    padding-bottom: 16px;
+}
+
+.form-section form{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-bottom: 35px;
+    border-bottom: 3px solid #3738674d;
+    padding-bottom: 50px;
+}
+
+.form-section input::placeholder{
+    text-indent: 12px;
+}
+
+.form-section input[type=text], [type=email], [type=password] {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 100%;
+    height: 37px;
+    border-radius: 4px;
+    border: 2px solid #37386780;   
+}
+
+.form-section #name-input, #email-input {
+    width: 100%;
+}
+
+.form-section legend {
+    display: block;
+}
+
+.form-section #department-select {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section #choose-dep {
+    font-size: 14px;
+    width: 360px;
+}
+
+.form-section select {
+    width: 100%;
+    height: 37px;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 2px solid #37386780;
+    text-indent: 12px; 
+}
+
+.form-section #priority-input {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.form-section #priority-input label {
+    margin-right: 48px;
+}
+
+.form-section #text-area {
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+    margin-bottom: 30px;
+}
+
+.form-section #text-area textarea {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    text-indent: 12px;
+    margin-top: 13px;
+}
+
+.form-section #form-checks {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-bottom: 42px;
+}
+
+.form-section #form-checks input {
+    width: 16px;
+    height: 16px;
+}
+
+.form-section #form-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-section #form-buttons button {
+    width: 84px;
+    height: 34px;
+}
+
+.form-section #form-buttons #submit-button {
+    border: none;
+}
+
+.form-section #form-buttons #submit-button {
+    background-color: #aace9b;
+}
+
+/* Our Story */
+
+#our-story-h2 {
+    font-weight: bold;
+    padding-bottom: 16px;
+    border-bottom: 4px solid #aace9b;
+    width: 135px;
+    margin-bottom: 39px;
+}
+
+#our-story p {
+    margin-top: 15px;
+}
+
+#our-story {
+    border-bottom: 3px solid #3738674d;
+    padding-bottom: 28px;
+    margin-bottom: 136px;
+}
+
+/* Links section */
+
+#links-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 137px;
+}
+
+#links-section div{
+    margin-bottom: 25px;
+    width: 20%;
+}
+
+#links-section h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#links-section a {
+    margin-right: 30px;
+}
+
+#last-div-line {
+    border-bottom: 3px solid #aace9b;
+}
+
+/* ---- */
+
+@media screen and (min-width: 481px) {
+    aside {
+        display: none;
+    }
+
+    .functions {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .functions .functionality {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .functions .functionality h3 {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .functions .functionality p {
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .improvement {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .improvement div {
+        display: flex;
+        flex-direction: column;
+        width: 38%;
+    }
+
+    .improvement :nth-of-type(odd){
+        margin-right: 5%;
+    }
+
+    .improvement button {
+        width: 75px;
+        height: 70px;
+    }
+
+    .form-section #form-inputs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .form-section #name-input, #email-input, #department-select, #priority-input {
+        width: 47%;
+    }
+
+    .form-section #name-input, #department-select {
+        margin-right: 5.5%;
+    }
+
+    .form-section #priority-input {
+        width: 47%;
+    }
+
+    .form-section #form-buttons {
+        justify-content: center;
+    }
+
+    .form-section #form-checks {
+        justify-content: center;
+    }
+
+    .form-section #form-checks div {
+        margin-right: 6%;
+    }
+
+    .form-section #form-buttons button {
+        margin-right: 10%;
+    }
+
+    #links-section {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+        align-items: baseline;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    header #menu-icon {
+        visibility: hidden;
+    }
+
+    main {
+        padding-left: 20%;
+    }
+
+    .first-part {
+        flex-direction: row;
+    }
+
+    .first-part .main-text {
+        width: 50%;
+        margin-right: 5%;
+    }
+
+    .first-part .main-text h2 {
+        font-size: 40px;
+        margin-bottom: 19px;
+    }
+
+    .first-part .main-text h3 {
+        font-size: 20px;
+        margin-bottom: 42px;
+    }
+
+    .first-part .main-text p {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+    .first-part .main-text button {
+        
+        width: 136px;
+    }
+
+    .first-part #first-image {
+        width: 50%;
+        justify-content: right;
+    }
+        
+    .functions  {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .functions div {
+        flex-direction: row;
+        max-width: 50%;
+    }
+
+    .functions .functionality h3 {
+        font-size: 30px;
+    }
+
+    .functions .functionality p {
+        font-size: 20px;
+    }
+
+    .improvement {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .improvement div {
+        display: flex;
+        flex-direction: column;
+        width: 38%;
+    }
+    
+    .improvement :nth-of-type(odd){
+        margin-right: 5%;
+    }
+    
+    .improvement button {
+        width: 75px;
+        height: 70px;
+    }
+}
