@@ -36,6 +36,7 @@ main {
 .login-form #email-login, #password-login {
     display: flex;
     flex-direction: column;
+    margin-top: 5%;
 }
 
 .login-form label {
