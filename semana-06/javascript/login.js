@@ -4,7 +4,11 @@ var emailSpan = document.getElementById('email-span');
 
 var password = document.querySelector('input[type="password"]');
 var passwordSpan = document.getElementById('password-span');
-var pwNumbers = ['1','2','3','4','5','6','7','8','9','0']; 
+var pwNumbers = /[0-9]/g;
+
+var LogIn = document.getElementById('login-button');
+LogIn.addEventListener('click', loginButton());
+
 
 function validateEmail() {
     var regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
@@ -22,39 +26,39 @@ function validateEmail() {
 function validatePassword() {
     if (password.value != "") {
         if (password.value.length > 8) {
-            if (password.value.includes(['1','2','3'])) {
+            if (password.value.match(pwNumbers)) {
                 passwordSpan.innerText = 'Correct';
                 passwordSpan.style.color = 'green';
                 password.style.border = '3px solid green';
             } else {
                 passwordSpan.innerText = 'Password must have at least one number';
-                passwordSpan.style.color = 'red';
-                password.style.border = '3px solid red';
+                badPassword();
             }
         } else {
             passwordSpan.innerText = 'Password must have 8 caracters min';
-            passwordSpan.style.color = 'red';
-            password.style.border = '3px solid red';
+            badPassword();
         }
-
     } else {
         passwordSpan.innerText = 'Must enter a password';
-        passwordSpan.style.color = 'red';
-        password.style.border = '3px solid red';
+        badPassword();
     }
 }
 
+
 function focusPassword(){
     passwordSpan.innerText = '';
-    email.style.border = '2px solid #37386780';
+    password.style.border = '3px solid #37386780';
 }
 
 function focusEmail() {
     emailSpan.innerText = '';
-    email.style.border = '2px solid #37386780';
+    email.style.border = '3px solid #37386780';
 }
 
-
+function badPassword() {
+    passwordSpan.style.color = 'red';
+    password.style.border = '3px solid red';
+}
 
 
 email.addEventListener('focus', focusEmail);
