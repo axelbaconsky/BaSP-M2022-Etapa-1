@@ -11,10 +11,13 @@ var lastName = document.getElementById('register-lastName');
 var lastSpan = document.getElementById('lastNameSpan');
 var emailRegister = document.querySelector('input[type="email"]');
 var emailSpan = document.getElementById('emailSpan');
-var password = document.getElementById('password-register');
-var passwordSpan = document.getElementById('passwordSpan');
-var passwordConfirm = document.getElementById('password-confirm');
-var passwordConfirmSpan = document.getElementById('confirmSpan');
+
+var passwordReg = document.getElementById('password-register');
+var passwordRegSpan = document.getElementById('passwordSpan');
+
+var Confirm = document.getElementById('password-confirm');
+var ConfirmSpan = document.getElementById('confirmSpan');
+
 var dni = document.getElementById('dni');
 var dniSpan = document.getElementById('dniSpan');
 var date = document.getElementById('date');
@@ -28,12 +31,17 @@ var addressSpan = document.getElementById('addressSpan');
 var postal = document.getElementById('postalCode');
 var postalSpan = document.getElementById('postalSpan');
 
+// Booleans
+
+var nameValid = false, lastValid = false, emailValid = false, passwordValid = false, passwordConfirmValid = false,
+dniValid = false, dateValid = false, phoneValid = false, cityValid = false, addressValid = false, postalValid = false;
+
 //Name validation
 
 function validateName() {
     for (var i = 0; i < nameRegister.value.length; i++) {
         if (!letters.includes(nameRegister.value[i].toLowerCase())) {
-            nameSpan.innerText = 'Invalid email';
+            nameSpan.innerText = 'Invalid name';
             nameError();
         } 
     }
@@ -44,8 +52,7 @@ function validateName() {
         nameSpan.innerText = 'Only letters allowed';
         nameError();
     } else {
-        nameSpan.innerText = 'Correct';
-        nameSpan.style.color = 'green';
+        nameValid = true;
         nameRegister.style.border = '3px solid green';
     }
 }
@@ -68,7 +75,7 @@ nameRegister.addEventListener('focus', focusName);
 function validateLastName() {
     for (var i = 0; i < lastName.value.length; i++) {
         if (!letters.includes(lastName.value[i].toLowerCase())) {
-            lastSpan.innerText = 'Invalid email';
+            lastSpan.innerText = 'Invalid last name';
             LastNameError();
         } 
     }
@@ -79,8 +86,7 @@ function validateLastName() {
         lastSpan.innerText = 'Only letters allowed';
         LastNameError();
     } else {
-        lastSpan.innerText = 'Correct';
-        lastSpan.style.color = 'green';
+        lastValid = true;
         lastName.style.border = '3px solid green';
     }
 }
@@ -103,8 +109,7 @@ lastName.addEventListener('focus', focusLastName);
 function validateEmail() {
     var regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     if (regex.test(emailRegister.value)) {
-        emailSpan.innerText = 'Correct';
-        emailSpan.style.color = 'green';
+        emailValid = true;
         emailRegister.style.border = '3px solid green';
     } else {
         emailSpan.innerText = 'Invalid email';
@@ -124,68 +129,65 @@ emailRegister.addEventListener('focus', focusEmail);
 // Password Validation
 
 function validatePassword() {
-    if (password.value != "") {
-        if (password.value.length > 8) {
-            if (password.value.match(numbers)) {
-                passwordSpan.innerText = 'Correct';
-                passwordSpan.style.color = 'green';
-                password.style.border = '3px solid green';
+    if (passwordReg.value != "") {
+        if (passwordReg.value.length > 8) {
+            if (passwordReg.value.match(numbers)) {
+                passwordValid = true;
+                passwordReg.style.border = '3px solid green';
             } else {
-                passwordSpan.innerText = 'Password must have at least one number';
+                passwordRegSpan.innerText = 'Password must have at least one number';
                 badPassword();
             }
         } else {
-            passwordSpan.innerText = 'Password must have 8 caracters min';
+            passwordRegSpan.innerText = 'Password must have 8 caracters min';
             badPassword();
         }
     } else {
-        passwordSpan.innerText = 'Must enter a password';
+        passwordRegSpan.innerText = 'Must enter a password';
         badPassword();
     }
 }
 
 function badPassword() {
-    passwordSpan.style.color = 'red';
-    password.style.border = '3px solid red';
+    passwordRegSpan.style.color = 'red';
+    passwordReg.style.border = '3px solid red';
 }
 
 function focusPassword(){
-    passwordSpan.innerText = '';
-    password.style.border = '3px solid #37386780';
+    passwordRegSpan.innerText = '';
+    passwordReg.style.border = '3px solid #37386780';
 }
 
-password.addEventListener('focus', focusPassword);
-password.addEventListener('blur', validatePassword);
+passwordReg.addEventListener('focus', focusPassword);
+passwordReg.addEventListener('blur', validatePassword);
 
 // Confirm Password
 
 function confirmPassword() {
-    if (password.value == passwordConfirm.value) {
-        passwordConfirmSpan.innerText = 'Correct';
-        passwordConfirmSpan.style.color = 'green';
-        passwordConfirm.style.border = '3px solid green';
+    if (passwordReg.value == Confirm.value) {
+        passwordConfirmValid = true;
+        Confirm.style.border = '3px solid green';
     } else {
-        passwordConfirmSpan.innerText = 'Passwords do not match';
-        passwordConfirmSpan.style.color = 'red';
-        passwordConfirm.style.border = '3px solid red';
+        ConfirmSpan.innerText = 'Passwords do not match';
+        ConfirmSpan.style.color = 'red';
+        Confirm.style.border = '3px solid red';
     }
 }
 
 function focusPasswordConfirm() {
-    passwordConfirmSpan.innerText = '';
-    passwordConfirm.style.border = '3px solid #37386780';
+    ConfirmSpan.innerText = '';
+    Confirm.style.border = '3px solid #37386780';
 }
 
-passwordConfirm.addEventListener('focus', focusPasswordConfirm);
-passwordConfirm.addEventListener('blur', confirmPassword);
+Confirm.addEventListener('focus', focusPasswordConfirm);
+Confirm.addEventListener('blur', confirmPassword);
 
 // DNI validation
 
 function validateDNI() {
     if (dni.value.match(numbers)) {
         if (dni.value.length > 7) {
-            dniSpan.innerText = 'Correct';
-            dniSpan.style.color = 'green';
+            dniValid = true;
             dni.style.border = '3px solid green';
         } else {
             dniSpan.innerText = 'DNI must contain 8 numbers';
@@ -205,12 +207,13 @@ dni.addEventListener('blur', validateDNI);
 
 // Date of Birth Validation
 
+
+
 // Phone Validation
 
 function validatePhone() {
     if (phone.value.length == 10) {
-        phoneSpan.innerText = 'Correct';
-        phoneSpan.style.color = 'green';
+        phoneValid = true;
         phone.style.border = '3px solid green';
     } else {
         phoneSpan.innerText = 'Phone number must contain 10 numbers';
@@ -232,8 +235,7 @@ phone.addEventListener('blur', validatePhone);
 function validateCity() {
     if (city.value.length != '') {
         if (city.value.length > 3) {
-            citySpan.innerText = 'Correct';
-            citySpan.style.color = 'green';
+            cityValid = true;
             city.style.border = '3px solid green';
         } else {
             citySpan.innerText = 'Must contain at least 3 characters';
@@ -257,13 +259,48 @@ city.addEventListener('blur', validateCity);
 
 // Address Validation
 
+function validateAddress() {
+    if (address.value.length != '') {
+        if (address.value.length >= 5) {
+            if (address.value.match(' ')) {
+                if (address.value.match(numbers)) {
+                    addressValid = true;
+                    address.style.border = '3px solid green';
+                } else {
+                    addressSpan.innerText = 'Must have at least one number';
+                    addressSpan.style.color = 'red';
+                    address.style.border = '3px solid red';
+                }
+            } else {
+                addressSpan.innerText = 'Must have a space';
+                addressSpan.style.color = 'red';
+                address.style.border = '3px solid red';
+            }
+        } else {
+            addressSpan.innerText = 'Must have at least 5 characters';
+            addressSpan.style.color = 'red';
+            address.style.border = '3px solid red';
+        }
+    } else {
+        addressSpan.innerText = 'Must enter an address';
+        addressSpan.style.color = 'red';
+        address.style.border = '3px solid red';
+    }
+}
+
+function focusAddress() {
+    addressSpan.innerText = '';
+    address.style.border = '3px solid #37386780'; 
+}
+
+address.addEventListener('focus', focusAddress);
+address.addEventListener('blur', validateAddress);
 
 // Postal Code Validation
 
 function validatePostal() {
     if (postal.value.length >= 4 && postal.value.length <= 5) {
-        postalSpan.innerText = 'Correct';
-        postalSpan.style.color = 'green';
+        postalValid = true;
         postal.style.border = '3px solid green';
     } else {
         postalSpan.innerText = 'Postal Code must have between 4 and 5 numbers';
@@ -280,4 +317,24 @@ function focusPostal() {
 postal.addEventListener('focus', focusPostal);
 postal.addEventListener('blur', validatePostal);
 
-// 
+// Create Button
+
+var create = document.getElementById('create-button').addEventListener('click', createButton);
+
+function createButton() {
+    if (nameValid && lastValid && emailValid && passwordValid && passwordConfirmValid &&
+        dniValid && phoneValid && cityValid && addressValid && postalValid) {
+        alert('Register Successful: ' +
+                    '\nYour name is: ' + nameRegister.value +
+                    '\nYour last name is: ' + lastName.value +
+                    '\nYour email is: ' + emailRegister.value +
+                    '\nYour password is: ' + passwordReg.value +
+                    '\nYour DNI is: ' + dni.value + 
+                    '\nYour phone is: ' + phone.value +
+                    '\nYour city is: ' + city.value +
+                    '\nYour address is: ' + address.value +
+                    '\nYour postal code is: ' + postal.value);
+    } else {
+        alert('One of the inputs is not valid. Please try again');
+    }
+}

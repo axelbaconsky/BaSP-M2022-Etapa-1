@@ -5,15 +5,12 @@ var emailSpan = document.getElementById('email-span');
 var password = document.querySelector('input[type="password"]');
 var passwordSpan = document.getElementById('password-span');
 var pwNumbers = /[0-9]/g;
-
-var LogIn = document.getElementById('login-button');
-LogIn.addEventListener('click', loginButton());
-
+var emailValid = false, passwordValid = false;
 
 function validateEmail() {
     var regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     if (regex.test(email.value)) {
-        emailSpan.innerText = 'Correct';
+        emailValid = true;
         emailSpan.style.color = 'green';
         email.style.border = '3px solid green';
     } else {
@@ -23,11 +20,14 @@ function validateEmail() {
     }
 }
 
+email.addEventListener('focus', focusEmail);
+email.addEventListener('blur', validateEmail);
+
 function validatePassword() {
     if (password.value != "") {
         if (password.value.length > 8) {
             if (password.value.match(pwNumbers)) {
-                passwordSpan.innerText = 'Correct';
+                passwordValid = true;
                 passwordSpan.style.color = 'green';
                 password.style.border = '3px solid green';
             } else {
@@ -60,10 +60,22 @@ function badPassword() {
     password.style.border = '3px solid red';
 }
 
-
-email.addEventListener('focus', focusEmail);
-email.addEventListener('blur', validateEmail);
-
 password.addEventListener('focus', focusPassword);
 password.addEventListener('blur', validatePassword);
 
+var LogIn = document.getElementById('login-button').addEventListener('click', loginButton);
+
+function loginButton() {
+    if (emailValid === true) {
+        if (passwordValid === true) {
+            alert(
+                'Success: ' +
+                '\nYour email is: ' + email.value +
+                '\nYour password is: ' + password.value);
+        } else {
+            alert('Password invalid');
+        }
+    } else {
+        alert('Email invalid');
+    }
+}
