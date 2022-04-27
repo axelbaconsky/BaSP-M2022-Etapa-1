@@ -32,5 +32,11 @@ Link to the JavaScript exercises:
 
 https://axelbaconsky.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
 
+## Week 06
+
+Did SignUp and LogIn screens using JavaScript (DOM). This is the link of the GitHub Page:
+
+https://axelbaconsky.github.io/BaSP-M2022-Etapa-1/semana-06/views
+
 
 _By Axel Bacoñsky_
