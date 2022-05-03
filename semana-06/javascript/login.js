@@ -25,7 +25,7 @@ email.addEventListener('blur', validateEmail);
 
 function validatePassword() {
     if (password.value != "") {
-        if (password.value.length > 8) {
+        if (password.value.length == 8) {
             if (password.value.match(pwNumbers)) {
                 passwordValid = true;
                 passwordSpan.style.color = 'green';
@@ -66,6 +66,7 @@ password.addEventListener('blur', validatePassword);
 var LogIn = document.getElementById('login-button').addEventListener('click', loginButton);
 
 function loginButton() {
+    requestInfo(email.value, password.value);
     if (emailValid === true) {
         if (passwordValid === true) {
             alert(
@@ -79,3 +80,4 @@ function loginButton() {
         alert('Email invalid');
     }
 }
+

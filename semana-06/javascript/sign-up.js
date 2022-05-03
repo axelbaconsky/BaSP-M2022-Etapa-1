@@ -164,14 +164,27 @@ passwordReg.addEventListener('blur', validatePassword);
 // Confirm Password
 
 function confirmPassword() {
-    if (passwordReg.value == Confirm.value) {
-        passwordConfirmValid = true;
-        Confirm.style.border = '3px solid green';
+    if (Confirm.value != "") {
+        if (passwordReg.value == Confirm.value) {
+            if (passwordValid == true) {
+                passwordConfirmValid = true;
+                Confirm.style.border = '3px solid green';
+            } else {
+                ConfirmSpan.innerText = 'Password not valid';
+                ConfirmSpan.style.color = 'red';
+                Confirm.style.border = '3px solid red';
+            }
+        } else {
+            ConfirmSpan.innerText = 'Passwords do not match';
+            ConfirmSpan.style.color = 'red';
+            Confirm.style.border = '3px solid red';
+        }
     } else {
-        ConfirmSpan.innerText = 'Passwords do not match';
+        ConfirmSpan.innerText = 'Must enter a password';
         ConfirmSpan.style.color = 'red';
         Confirm.style.border = '3px solid red';
     }
+    
 }
 
 function focusPasswordConfirm() {
@@ -185,17 +198,29 @@ Confirm.addEventListener('blur', confirmPassword);
 // DNI validation
 
 function validateDNI() {
-    if (dni.value.match(numbers)) {
-        if (dni.value.length > 7) {
-            dniValid = true;
-            dni.style.border = '3px solid green';
+    if (dni.value != '') {
+        if (dni.value.match(numbers)) {
+            if (dni.value.length == 8) {
+                dniValid = true;
+                dni.style.border = '3px solid green';
+            } else {
+                dniSpan.innerText = 'DNI must contain 8 numbers';
+                dniSpan.style.color = 'red';
+                dni.style.border = '3px solid red';
+            }
         } else {
-            dniSpan.innerText = 'DNI must contain 8 numbers';
+            dniSpan.innerText = 'DNI can only contain numbers';
             dniSpan.style.color = 'red';
             dni.style.border = '3px solid red';
-        }
+        }   
+    } else {
+        dniSpan.innerText = 'Must enter a DNI';
+        dniSpan.style.color = 'red';
+        dni.style.border = '3px solid red';
     }
+        
 }
+    
 
 function focusDNI() {
     dniSpan.innerText = '';
@@ -208,6 +233,33 @@ dni.addEventListener('blur', validateDNI);
 // Date of Birth Validation
 
 
+function validateDate() {
+    var year = 2022;
+    var birthYear = date.value.slice(6,10);
+    if (date.value.length == 10) {
+        if((year - birthYear) < 100 && (year - birthYear) > 17){
+            dateValid = true;
+            date.style.border = '3px solid green';
+        } else {
+            dateSpan.innerText = 'Must be over 18 years old';
+            dateSpan.style.color = 'red';
+            date.style.border = '3px solid red';
+        }
+    } else {
+        dateSpan.innerText = 'Invalid date input (Must be: dd/mm/yyyy)';
+        dateSpan.style.color = 'red';
+        date.style.border = '3px solid red';
+    }
+    
+}
+
+    function focusDate() {
+        dateSpan.innerText = '';
+        date.style.border = '3px solid #37386780';    
+    }
+    
+    date.addEventListener('focus', focusDate);
+    date.addEventListener('blur', validateDate);
 
 // Phone Validation
 
@@ -323,13 +375,14 @@ var create = document.getElementById('create-button').addEventListener('click', 
 
 function createButton() {
     if (nameValid && lastValid && emailValid && passwordValid && passwordConfirmValid &&
-        dniValid && phoneValid && cityValid && addressValid && postalValid) {
+        dniValid && dateValid && phoneValid && cityValid && addressValid && postalValid) {
         alert('Register Successful: ' +
                     '\nYour name is: ' + nameRegister.value +
                     '\nYour last name is: ' + lastName.value +
                     '\nYour email is: ' + emailRegister.value +
                     '\nYour password is: ' + passwordReg.value +
                     '\nYour DNI is: ' + dni.value + 
+                    '\nYour Birth Date is: ' + date.value +
                     '\nYour phone is: ' + phone.value +
                     '\nYour city is: ' + city.value +
                     '\nYour address is: ' + address.value +

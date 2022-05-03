@@ -13,8 +13,8 @@ main {
 .register-form {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    margin-left: 5%;
+    width: 60%;
+    height: 80%;
     margin-top: 15%;
     padding: 60px 80px 60px 40px;
     border: 5px solid #373867;
@@ -61,3 +61,11 @@ main {
     border: 4px solid #373867;
 }
 
+@media (max-width: 1024px) {
+    .register-form {
+        width: 70%;
+        margin-left: 10%;
+        padding-right: 5%;
+        align-items: center;
+    }
+}
