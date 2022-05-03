@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+#login-div {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 10%;
+    margin-top: 15%;
+    padding: 60px 80px 60px 40px;
+    border: 5px solid #373867;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+#login-div h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form #email-login, #password-login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.login-form label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.login-form .login-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    margin-top: 5%;
+}
+

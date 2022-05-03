@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - TrackGenix</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/css/header.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/sign-up.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <header>
+        <img id="logo-img" src="./../assets/icons/trackgenix-logo.png" alt="trackgenix logo" width="50px">
+        <h1>Trackgenix SA</h1>
+        <img id="menu-icon" src="./../assets/icons/menu-icon.png" alt="Menu button">
+    </header>
+    <aside class="menu">
+        <span>Menu</span>
+            <div id="menu-div"></div>
+            <ul class="menu-buttons">
+                    <li>
+                        <a href="./../views/index.html">Home</a>
+                    </li>
+                <div class="menu-div"></div>
+                    <li>
+                        <a href="./../views/sign-up.html">Sign Up</a>
+                    </li>
+                <div class="menu-div"></div>
+                    <li>
+                        <a href="./../views/login.html">Login</a>
+                    </li>
+                <div class="menu-div"></div>
+            </ul>
+            <span id="contact-us">Contact Us</span>
+            <div class="side-contact">
+                <div id="side-email" >
+                    <img src="./../assets/icons/mail-icon.png">
+                    <p>contact@trackgenix.com</p>
+                </div>
+                <div id="side-phone">
+                    <img src="./../assets/icons/phone-icon.png">
+                    <p>(000) 000-0000</p>
+                </div>
+                <div id="side-address">
+                    <img src="./../assets/icons/home-icon.png">
+                    <p>1234 Somewhere Road #8254 Nashville, TN 00000-0000</p>
+                </div>
+            </div>
+    </aside>
+    <main>
+        <form id="signup-form">
+            <div class="register-form">
+                        <h2>Register</h2>
+                        <div class="form-div">    
+                            <div>
+                                <label>Name</label>
+                                <input id="register-name" type="text" name="name" placeholder="John">
+                                <span id="nameSpan"></span>
+                            </div>
+                            <div>
+                                <label>Last Name</label>
+                                <input id="register-lastName" type="text" name="lastName" placeholder="Smith">
+                                <span id="lastNameSpan"></span>
+                            </div>
+                            <div>
+                                <label>Email</label>
+                                <input id="email-register" type="email" name="email-register" placeholder="johnsmith@mail.com">
+                                <span id="emailSpan"></span>
+                            </div>
+                            <div>
+                                <label>Password</label>
+                                <input id="password-register" type="password" name="password-register">
+                                <span id="passwordSpan"></span>
+                            </div>
+                            <div>
+                                <label>Confirm Password</label>
+                                <input id="password-confirm" type="password" name="password-confirm">
+                                <span id="confirmSpan"></span>
+                            </div>
+                            <div>
+                                <label>DNI</label>
+                                <input id="dni" type="number" name="dni" placeholder="00000000">
+                                <span id="dniSpan"></span>
+                            </div>
+                        </div>
+                        <div class="form-div">
+                            <div>
+                                <label>Date of Birth</label>
+                                <input id="date" type="text" name="date" placeholder="01/01/1990">
+                                <span id="dateSpan"></span>
+                            </div>
+                            <div>
+                                <label>Phone number</label>
+                                <input id="phone" type="number" name="phone" placeholder="0000-000000">
+                                <span id="phoneSpan"></span>
+                            </div>
+                            <div>
+                                <label>City</label>
+                                <input id="city" type="text" name="city" placeholder="Nashville">
+                                <span id="citySpan"></span>
+                            </div>
+                            <div>
+                                <label>Address</label>
+                                <input id="address" type="text" name="address" placeholder="1234 Somewhere Road">
+                                <span id="addressSpan"></span>
+                            </div>
+                            <div>
+                                <label>Postal Code</label>
+                                <input id="postalCode" type="number" name="postalCode" placeholder="8254">
+                                <span id="postalSpan"></span>
+                            </div>
+                        </div>
+                        <div id="create-button">
+                            <button>Create</button>
+                        </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com"><img src="./../assets/icons/linkedin-logo.png" alt="linkedin logo"></a>
+            <a href="https://www.twitter.com"><img src="./../assets/icons/twitter-logo.png" alt="twitter logo"></a>
+            <a href="https://www.facebook.com"><img src="./../assets/icons/fb-logo.png" alt="facebook logo"></a>
+            <a href="https://www.instagram.com"><img src="./../assets/icons/instagram-logo.png" alt="instagram logo"></a>
+            <a href="https://www.github.com"><img src="./../assets/icons/github-logo.png" alt="github logo"></a>
+        </div>
+        <div id="copyright">
+            <p>Rosario, Argentina</p>
+            <p>Copyright 2022 Radium Rocket</p>
+            <p>All rights reserved</p>
+        </div>
+    </footer>
+    <script src="./../javascript/sign-up.js"></script>
+</body>
+</html>
