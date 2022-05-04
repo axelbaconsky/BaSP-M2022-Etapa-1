@@ -31,6 +31,8 @@ var addressSpan = document.getElementById('addressSpan');
 var postal = document.getElementById('postalCode');
 var postalSpan = document.getElementById('postalSpan');
 
+var urlSignup = 'https://basp-m2022-api-rest-server.herokuapp.com/signup';
+
 // Booleans
 
 var nameValid = false, lastValid = false, emailValid = false, passwordValid = false, passwordConfirmValid = false,
@@ -164,11 +166,23 @@ passwordReg.addEventListener('blur', validatePassword);
 // Confirm Password
 
 function confirmPassword() {
-    if (passwordReg.value == Confirm.value) {
-        passwordConfirmValid = true;
-        Confirm.style.border = '3px solid green';
+    if (Confirm.value != "") {
+        if (passwordReg.value == Confirm.value) {
+            if (passwordValid == true) {
+                passwordConfirmValid = true;
+                Confirm.style.border = '3px solid green';
+            } else {
+                ConfirmSpan.innerText = 'Password not valid';
+                ConfirmSpan.style.color = 'red';
+                Confirm.style.border = '3px solid red';
+            }
+        } else {
+            ConfirmSpan.innerText = 'Passwords do not match';
+            ConfirmSpan.style.color = 'red';
+            Confirm.style.border = '3px solid red';
+        }
     } else {
-        ConfirmSpan.innerText = 'Passwords do not match';
+        ConfirmSpan.innerText = 'Must enter a password';
         ConfirmSpan.style.color = 'red';
         Confirm.style.border = '3px solid red';
     }
@@ -185,16 +199,26 @@ Confirm.addEventListener('blur', confirmPassword);
 // DNI validation
 
 function validateDNI() {
-    if (dni.value.match(numbers)) {
-        if (dni.value.length > 7) {
-            dniValid = true;
-            dni.style.border = '3px solid green';
+    if (dni.value != '') {
+        if (dni.value.match(numbers)) {
+            if (dni.value.length == 8) {
+                dniValid = true;
+                dni.style.border = '3px solid green';
+            } else {
+                dniSpan.innerText = 'DNI must contain 8 numbers';
+                dniSpan.style.color = 'red';
+                dni.style.border = '3px solid red';
+            }
         } else {
-            dniSpan.innerText = 'DNI must contain 8 numbers';
+            dniSpan.innerText = 'DNI can only contain numbers';
             dniSpan.style.color = 'red';
             dni.style.border = '3px solid red';
-        }
-    }
+        }   
+    } else {
+        dniSpan.innerText = 'Must enter a DNI';
+        dniSpan.style.color = 'red';
+        dni.style.border = '3px solid red';
+    }      
 }
 
 function focusDNI() {
@@ -207,7 +231,32 @@ dni.addEventListener('blur', validateDNI);
 
 // Date of Birth Validation
 
+function validateDate() {
+    var year = 2022;
+    var birthYear = date.value.slice(6,10);
+    if (date.value.length == 10) {
+        if((year - birthYear) < 100 && (year - birthYear) > 17){
+            dateValid = true;
+            date.style.border = '3px solid green';
+        } else {
+            dateSpan.innerText = 'Must be over 18 years old';
+            dateSpan.style.color = 'red';
+            date.style.border = '3px solid red';
+        }
+    } else {
+        dateSpan.innerText = 'Invalid date input (Must be: dd/mm/yyyy)';
+        dateSpan.style.color = 'red';
+        date.style.border = '3px solid red';
+    }
+}
 
+    function focusDate() {
+        dateSpan.innerText = '';
+        date.style.border = '3px solid #37386780';    
+    }
+    
+    date.addEventListener('focus', focusDate);
+    date.addEventListener('blur', validateDate);
 
 // Phone Validation
 
@@ -303,7 +352,7 @@ function validatePostal() {
         postalValid = true;
         postal.style.border = '3px solid green';
     } else {
-        postalSpan.innerText = 'Postal Code must have between 4 and 5 numbers';
+        postalSpan.innerText = 'Postal Code must be between 4 and 5 numbers';
         postalSpan.style.color = 'red';
         postal.style.border = '3px solid red';
     }
@@ -324,7 +373,20 @@ var create = document.getElementById('create-button').addEventListener('click', 
 function createButton() {
     if (nameValid && lastValid && emailValid && passwordValid && passwordConfirmValid &&
         dniValid && phoneValid && cityValid && addressValid && postalValid) {
-        alert('Register Successful: ' +
+        successfulRegister();
+        var listKey = ['name', 'lastName', 'dni', 'dob', 'phone', 'address', 'city', 'zip', 
+        'email', 'password', 'confirmPassword'];
+        var listValue = [nameRegister.value, lastName.value, dni.value, date.value, phone.value,
+                address.value, city.value, postal.value, emailRegister.value, passwordReg.value, Confirm.value];
+        signUpFetch(urlSignup, listKey, listValue);
+        storageSignUp()
+    } else {
+        alert('One of the inputs is not valid. Please try again');
+    }
+}
+
+function successfulRegister() {
+    alert('Register Successful: ' +
                     '\nYour name is: ' + nameRegister.value +
                     '\nYour last name is: ' + lastName.value +
                     '\nYour email is: ' + emailRegister.value +
@@ -334,9 +396,47 @@ function createButton() {
                     '\nYour city is: ' + city.value +
                     '\nYour address is: ' + address.value +
                     '\nYour postal code is: ' + postal.value);
-    } else {
-        alert('One of the inputs is not valid. Please try again');
+}
+
+// Fetch Function
+
+listKey = [];
+listValue = [];
+
+function signUpFetch(urlSignup, listKey, listValue) {
+    var queryParams = joinParams(listKey, listValue);
+    var signUpUrl = urlSignup.concat("?", queryParams);
+
+    fetch(signUpUrl)
+        .then(response => response.json())
+        .then(function(result) {
+            console.log('Result: ', result);
+            alert(result.msg);
+        })
+        
+}
+
+function joinParams(listKey, listValue) {
+    var arr = [];
+    for (var x = 0; x < listKey.length; x++) {
+        arr.push(listKey[x].concat("=", listValue[x]));
     }
+    console.log('Arr: ', arr)
+    return arr.join('&');
+}
+
+// LocalStorage Function
+
+function storageSignUp() {
+    localStorage.setItem('name', nameRegister.value);
+    localStorage.setItem('lastName', lastName.value);
+    localStorage.setItem('email', emailRegister.value);
+    localStorage.setItem('password', passwordReg.value);
+    localStorage.setItem('DNI', dni.value);
+    localStorage.setItem('phone', phone.value);
+    localStorage.setItem('city', city.value);
+    localStorage.setItem('address', address.value);
+    localStorage.setItem('postalCode', postal.value);
 }
 
 // Window onload
