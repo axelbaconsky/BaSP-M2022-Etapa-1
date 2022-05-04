@@ -372,7 +372,7 @@ var create = document.getElementById('create-button').addEventListener('click', 
 
 function createButton() {
     if (nameValid && lastValid && emailValid && passwordValid && passwordConfirmValid &&
-        dniValid && phoneValid && cityValid && addressValid && postalValid) {
+        dniValid && dateValid && phoneValid && cityValid && addressValid && postalValid) {
         successfulRegister();
         var listKey = ['name', 'lastName', 'dni', 'dob', 'phone', 'address', 'city', 'zip', 
         'email', 'password', 'confirmPassword'];
@@ -392,6 +392,7 @@ function successfulRegister() {
                     '\nYour email is: ' + emailRegister.value +
                     '\nYour password is: ' + passwordReg.value +
                     '\nYour DNI is: ' + dni.value + 
+                    '\nYour Birth date is: ' + date.value +
                     '\nYour phone is: ' + phone.value +
                     '\nYour city is: ' + city.value +
                     '\nYour address is: ' + address.value +
@@ -433,11 +434,18 @@ function storageSignUp() {
     localStorage.setItem('email', emailRegister.value);
     localStorage.setItem('password', passwordReg.value);
     localStorage.setItem('DNI', dni.value);
+    localStorage.setItem('dob', date.value);
     localStorage.setItem('phone', phone.value);
     localStorage.setItem('city', city.value);
     localStorage.setItem('address', address.value);
-    localStorage.setItem('postalCode', postal.value);
+    localStorage.setItem('zip', postal.value);
 }
+
+// Get LocalStorage
+
+
+    
+
 
 // Window onload
 
@@ -445,4 +453,17 @@ window.onload = function() {
     document.getElementById('signup-form').addEventListener('submit', function(event) {
         event.preventDefault()
     })
+
+    if (localStorage.getItem('name') != 'null') {
+        nameRegister.value = localStorage.getItem('name');
+        lastName.value = localStorage.getItem('lastName');
+        emailRegister.value = localStorage.getItem('email');
+        passwordReg.value = localStorage.getItem('password');
+        dni.value = localStorage.getItem('DNI');
+        date.value = localStorage.getItem('dob');
+        phone.value = localStorage.getItem('phone');
+        city.value = localStorage.getItem('city');
+        address.value = localStorage.getItem('address');
+        postal.value = localStorage.getItem('zip');
+    }
 }
