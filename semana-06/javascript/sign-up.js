@@ -217,8 +217,7 @@ function validateDNI() {
         dniSpan.innerText = 'Must enter a DNI';
         dniSpan.style.color = 'red';
         dni.style.border = '3px solid red';
-    }
-        
+    }      
 }
     
 
